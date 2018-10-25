@@ -113,8 +113,16 @@ direccionesModulo = (function () {
       //waypoints: waypts,
       optimizeWaypoints: true,
       travelMode: document.getElementById('comoIr').value
-    })
-  }    
+    },function(response, status) {
+      if (status === 'OK') {
+        mostradorDirecciones.setDirections(response);
+   
+      } else {
+        alert('Could not display directions due to: ' + status);
+      }
+    });
+  }
+    
 
   
 
