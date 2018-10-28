@@ -13,7 +13,7 @@ marcadorModulo = (function () {
         El marcador que vas a crear debe asignarse a la variable miMarcador */
     var markerOp ={  
       title : "mi marcador",
-      animation:google.maps.Animation,    
+      animation:google.maps.Animation.BOUNCE,    
       position: ubicacion, 
       map: mapa
     }  

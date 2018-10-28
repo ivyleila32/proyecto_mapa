@@ -110,13 +110,16 @@ direccionesModulo = (function () {
     servicioDirecciones.route({
       origin: document.getElementById('desde').value,
       destination: document.getElementById('hasta').value,
-      //waypoints: waypts,
+      waypoints: waypts,
       optimizeWaypoints: true,
       travelMode: document.getElementById('comoIr').value
     },function(response, status) {
       if (status === 'OK') {
         mostradorDirecciones.setDirections(response);
-   
+        waypts.forEach(function(puntoIntermedio) {
+          marcadorModulo.agregarMarcadorRuta (puntoIntermedio.location, 'I', false);
+        });
+       
       } else {
         alert('Could not display directions due to: ' + status);
       }

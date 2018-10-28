@@ -14,7 +14,7 @@ lugaresModulo = (function () {
       });
       
     var autocompletes = ['direccion', 'desde', 'hasta', 'agregar'];
-    autocompletes.forEach(function(id){
+    autocompletes.forEach(function(id) {
       var autoDireccion = new google.maps.places.Autocomplete(document.getElementById(id));
       autoDireccion.setBounds(circulo.getBounds());
     });

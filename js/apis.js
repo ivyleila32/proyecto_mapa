@@ -16,7 +16,16 @@ function inicializarMapa () {
     streetViewControl: true,
     
   };
+
+  /*var trafficLayer = new google.maps.TrafficLayer();
+  trafficLayer.setMap(mapa);
+  var bikeLayer = new google.maps.BicyclingLayer();
+  bikeLayer.setMap(mapa);
+  var transitLayer = new google.maps.TransitLayer();
+  transitLayer.setMap(mapa);*/
+
   mapa = new google.maps.Map(mapcontainer, mapOptions);
+
   geocodificadorModulo.inicializar();
   marcadorModulo.inicializar();
   direccionesModulo.inicializar();
